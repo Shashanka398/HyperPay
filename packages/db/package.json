@@ -9,10 +9,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@repo/db":"*",
-    "@prisma/client": "^6.3.0"
+    "@prisma/client": "^6.3.1",
+    "@repo/db": "*",
+    "prisma": "^6.3.1"
   },
-   "exports": {
-        "./client": "./index.ts"
-    }
+  "exports": {
+    "./client": "./index.ts"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
 }
