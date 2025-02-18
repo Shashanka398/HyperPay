@@ -1,3 +1,5 @@
+"use client"
+import { peerToPeer } from 'app/lib/actions/peerToPeer';
 import React, { useState } from 'react';
 
 const PeerToPeer = () => {
@@ -6,17 +8,23 @@ const PeerToPeer = () => {
         amount: 0,
     });
 
-    const handleSubmit = (e) => {
+  
+
+    const handleSubmit =async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(peerDetails);
+        const message =await peerToPeer(Number(peerDetails.amount)*100, peerDetails.phone);
+       alert(message?.message);
     };
 
-    const handleChange = (e) => {
+    const handleChange = async (e:any) => {
         const { name, value } = e.target;
         setPeerDetails((prevDetails) => ({
             ...prevDetails,
             [name]: value,
         }));
+
+       
     };
 
     return (

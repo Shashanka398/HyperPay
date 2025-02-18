@@ -1,5 +1,5 @@
 import { BadgeEuro, HomeIcon,UsersRound } from "lucide-react";
-import { title } from "process";
+
 
 export const  NavItems=[
     {
@@ -14,7 +14,7 @@ export const  NavItems=[
     },
     {
       title:"P2P transfer",
-      url:"peerToPeer",
+      url:"/peerToPeer",
       icon:UsersRound
     }
   

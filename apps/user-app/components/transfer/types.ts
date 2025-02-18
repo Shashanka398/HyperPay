@@ -8,4 +8,9 @@ export interface NetBankingType{
     amount: number;
     bank: string;
 }
+
+export   interface PeerDetails {
+        phone: string;
+        amount: number;
+    }
  export  interface CardDetailsChangeEvent extends React.ChangeEvent<HTMLInputElement> {}

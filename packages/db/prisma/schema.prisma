@@ -15,6 +15,9 @@ model User {
   password          String
   OnRampTransaction OnRampTransaction[]
   Balance           Balance[]
+  sentTransfers     p2ptransfer[] @relation(name: "SenderRelation")
+  receivedTransfers p2ptransfer[] @relation(name: "ReceiverRelation")
+
 }
 
 model Merchant {
@@ -42,7 +45,15 @@ model Balance {
   locked Int
   user   User @relation(fields: [userId], references: [id])
 }
-
+model p2ptransfer{
+  id Int @id @default(autoincrement())
+  senderId Int
+  receiverId Int
+  timeStamp DateTime
+  amount    Int
+  receiver User @relation(name: "ReceiverRelation", fields: [receiverId], references: [id])
+  sender User @relation(name: "SenderRelation",fields: [senderId], references: [id])
+}
 enum AuthType {
   Google
   Github
@@ -53,3 +64,5 @@ enum OnRampStatus {
   Failure
   Processing
 }
+
+
