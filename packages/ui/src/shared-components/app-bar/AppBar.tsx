@@ -1,11 +1,5 @@
-import dynamic from "next/dynamic"
-import {NavItem} from "@/types/appBar.type"
 
-const Home = dynamic(() => import("lucide-react").then(mod => mod.Home))
-const Inbox = dynamic(() => import("lucide-react").then(mod => mod.Inbox))
-const Calendar = dynamic(() => import("lucide-react").then(mod => mod.Calendar))
-const Search = dynamic(() => import("lucide-react").then(mod => mod.Search))
-const Settings = dynamic(() => import("lucide-react").then(mod => mod.Settings))
+import {NavItem} from "../../types/appBar.type"
 
 import {
   Sidebar,
@@ -16,7 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from "../../components/ui/sidebar"
 
 
 

@@ -2,8 +2,9 @@
 import React from "react";
 
 
-export default function Page({childrens}:{childrens:React.ReactNode}) {
+export default function Page() {
     return(
-       <></>
+       <>
+       </>
     )
 }

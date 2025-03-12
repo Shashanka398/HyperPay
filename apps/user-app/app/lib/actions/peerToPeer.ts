@@ -23,8 +23,8 @@ export const peerToPeer = async (amount: number, phone: string) => {
         }
     }
 
-
-        await prisma.$transaction(async (trx) => {
+        
+        await prisma.$transaction(async (trx:any) => {
             await trx.$queryRaw`SELECT * FROM "Balance" WHERE "userId"=${Number(sender)} FOR UPDATE`
             const sufficientBalance = await trx.balance.findUnique({
                 where: {
