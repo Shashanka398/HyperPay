@@ -8,6 +8,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "db:generate":"cd packages/db && npx prisma generate &&  npx prisma migrate && cd ../.."
   },
+  
   "devDependencies": {
     "prettier": "^3.4.2",
     "tsc-alias": "^1.8.11",
