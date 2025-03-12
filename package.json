@@ -5,8 +5,11 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate":"cd packages/db && npx prisma generate &&  npx prisma migrate && cd ../..",
+    "start-user-app": " cd ./apps/user-app  && npm run star"
   },
+  
   "devDependencies": {
     "prettier": "^3.4.2",
     "tsc-alias": "^1.8.11",
