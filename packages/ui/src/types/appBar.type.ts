@@ -7,4 +7,5 @@ export interface NavItem {
     title: string;
     url: string;
     icon?: typeof LucideIcon;
+    children?: NavItem[];   
 }

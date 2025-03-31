@@ -18,7 +18,7 @@ interface Transaction {
   provider: string;
 }
 
-interface FormattedTransaction {
+export interface FormattedTransaction {
   time: string;
   amount: number;
   status: string;
@@ -78,17 +78,24 @@ const NetBanking = async () => {
   }));
 
   return (
-    <div className='flex flex-row gap-3'>
-      <AddMoney/>
-      <div className='flex flex-col gap-3'> 
+    <div className='w-full h-full flex flex-col gap-3 justify-center items-center'>
+      <div className='w-full h-full'> 
         <Balance balance={{
           amount: balance.amount.toString(),
           locked: (lockedAmount / 100).toString()
-        }}/>
-        <RecentTransactions
-          transactions={formattedTransactions}
+        }}
+         transactions={formattedTransactions}
         />
       </div>
+      <div className='flex flex-row gap-3 w-full h-full'>
+          <AddMoney/>
+           <RecentTransactions
+          transactions={formattedTransactions}
+        />
+    
+      </div>
+    
+
     </div>
   )
 }

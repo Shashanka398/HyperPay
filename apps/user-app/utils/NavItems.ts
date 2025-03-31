@@ -1,4 +1,23 @@
-import { BadgeEuro, HomeIcon,UsersRound } from "lucide-react";
+import { BadgeEuro, CreditCard, Globe, HomeIcon,RefreshCw,UsersRound } from "lucide-react";
+
+export const TransferNav=[
+  {
+    title:"Upi Options",
+    url:"/transfer/upi",
+    icon:RefreshCw
+
+  },
+  {
+    title:"Credit/Debit/ATM card",
+       url:"/transfer/cards",
+        icon:CreditCard
+  },
+  {
+    title:"Net Banking",
+    url:"/transfer/netBanking",
+    icon:Globe
+  }
+]
 
 
 export const  NavItems=[
@@ -10,7 +29,8 @@ export const  NavItems=[
     {
         title: "Transfer",
         url: "/transfer",
-        icon: BadgeEuro
+        icon: BadgeEuro,
+        children:TransferNav
     },
     {
       title:"P2P transfer",
@@ -18,20 +38,4 @@ export const  NavItems=[
       icon:UsersRound
     }
   
-]
-
-export const TransferNav=[
-  {
-    title:"Upi Options",
-    url:"/transfer/upi",
-
-  },
-  {
-    title:"Credit/Debit/ATM card",
-       url:"/transfer/cards",
-  },
-  {
-    title:"Net Banking",
-    url:"/transfer/netBanking"
-  }
 ]
