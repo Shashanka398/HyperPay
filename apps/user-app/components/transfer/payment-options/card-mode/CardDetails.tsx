@@ -31,7 +31,7 @@ const CardDetailsForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-6 bg-white dark:bg-gray-950">
+    <div className="flex justify-center items-center min-h-screen p-6">
       <Card className="w-full max-w-md bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 text-gray-900 dark:text-gray-100 shadow-xl">
         <CardHeader className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 pb-6">
           <CardTitle className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Payment Details</CardTitle>

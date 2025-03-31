@@ -27,7 +27,7 @@ export default function TransferOptions() {
       id: "netbanking",
       title: "Net Banking",
       icon: <Globe className="h-5 w-5" />,
-      route: "/transfer/netbanking"
+      route: "/transfer/netBanking"
     }
   ];
 
